@@ -1,0 +1,138 @@
+/* ===== General Styles ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+
+    padding: 20px;
+    height: 100%;
+}
+
+h1, .subtitle {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+
+    height: 100%;
+}
+
+/* ===== Ingredients ===== */
+.ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ingredient {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ingredient img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.ingredient:hover, .ingredient:focus  {
+    background-color: #f9f9f9;
+}
+
+/* ===== Steps ===== */
+.step {
+    position: relative;
+    background-image: url(step1.jpg);
+    background-size: cover; 
+    background-position: center;
+    padding: 1em;;
+    border: 0.1em solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    height: 500px;
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    border-radius: 0 0 10px 10px; 
+    z-index: 0;
+}
+
+.step {
+    display: none;
+}
+
+.step:target, .step:focus-within {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.step > h2, p, div {
+    z-index: 2;
+}
+
+.step > h2 {
+    margin-top: 0;
+}
+
+.step > p {
+    margin-top: 0;;
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: none;
+    color: #fff;
+    text-decoration: none;
+    border: 1.5px solid #45a049;
+    border-radius: 4px;
+    text-align: center;
+}
+
+a:hover, a:focus {
+    background-color: #45a049;
+}
+
+.restart {
+    border-color: yellowgreen;
+}
+
+.restart:hover, .restart:focus {
+    background-color: yellowgreen;
+}
+
+.step-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
