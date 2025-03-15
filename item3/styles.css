@@ -1,12 +1,20 @@
 /* ===== General Styles ===== */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+    margin: auto;
     padding: 0;
     background-color: white;
 
     padding: 20px;
-    height: 100%;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+body > * {
+    width: 100%;
 }
 
 h1, .subtitle {
@@ -16,38 +24,45 @@ h1, .subtitle {
 main {
     display: flex;
     flex-direction: column;
-    background-color: white;
     border-radius: 8px;
+}
 
-    height: 100%;
+section {
+    margin-bottom: 20px;
 }
 
 /* ===== Ingredients ===== */
 .ingredients {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
 .ingredient {
-    width: 200px;
+    width: 100px;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
+    background-color: white;
     padding: 10px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .ingredient img {
-    width: 50%;
+    width: 60%;
     height: auto;
     border-radius: 8px;
+}
+
+.ingredient > p {
+    font-size: small;
 }
 
 .ingredient:hover, .ingredient:focus  {
@@ -57,7 +72,6 @@ main {
 /* ===== Steps ===== */
 .step {
     position: relative;
-    background-image: url(step1.jpg);
     background-size: cover; 
     background-position: center;
     padding: 1em;;
@@ -87,11 +101,22 @@ main {
     display: none;
 }
 
-.step:target, .step:focus-within {
+.step:target, .step:focus-within, body:not(:has(:target)) #step1 {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     align-items: flex-start;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .step > h2, p, div {
@@ -135,4 +160,45 @@ a:hover, a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* ===== Step navigation dots ===== */
+
+.step-dots {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.step-dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    background-color: white;
+    border-radius: 1000px;
+    text-indent: -9999px;
+    transition: background-color 0.3s ease;
+}
+
+.step-dot:hover, .step-dot:focus {
+    background-color: #45a04952;
+}
+
+.step#step1:target ~ div .step-dot[href$="#step1"],
+.step#step2:target ~ div .step-dot[href$="#step2"],
+.step#step3:target ~ div .step-dot[href$="#step3"],
+.step#step4:target ~ div .step-dot[href$="#step4"],
+.step#step5:target ~ div .step-dot[href$="#step5"],
+.step#step6:target ~ div .step-dot[href$="#step6"],
+.step#step7:target ~ div .step-dot[href$="#step7"] {
+    background-color: #45a049; 
+}
+
+/* Fallback: Highlight step 1 dot if no step is targeted */
+body:not(:has(:target)) .step-dot[href$="#step1"] {
+    background-color: #45a049;
 }
