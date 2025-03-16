@@ -3,106 +3,486 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Newsfeed</title>
+        <title>Old Reddit</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <header>
             <img src="Reddit-Logo-2005-768x461.png" alt="Reddit Logo" />
+            <div class="user">
+                <div class="user-info">
+                    <div class="username">
+                        <a href="#" aria-label="User Profile">ZookeepergameOk7629</a>, you're back!
+                        <a href="#" aria-label="User Preferences">preferences</a> |
+                        <a href="#" aria-label="Logout">logout?</a> 😟
+                    </div>
+                </div>
+            </div>
         </header>
+
         <main class="container">
             <aside class="sidebar">
-                <ul class="menu">
-                    <li><img src="pageicon.png" alt="Icon" class="icon"> FRONT PAGE</li>
-                    <li><img src="pageicon.png" alt="Icon" class="icon"> PICS</li>
-                    <li><img src="pageicon.png" alt="Icon" class="icon"> SCIENCE</li>
-                    <li><img src="pageicon.png" alt="Icon" class="icon"> TECHNOLOGY</li>
-                    <li><img src="pageicon.png" alt="Icon" class="icon"> ASK REDDIT</li>
-                    <li><img src="pageicon.png" alt="Icon" class="icon"> FUNNY</li>
-                    <li><img src="pageicon.png" alt="Icon" class="icon"> WTF</li>
-                    <li><img src="pageicon.png" alt="Icon" class="icon"> IAMA</li>
-                    <li><img src="pageicon.png" alt="Icon" class="icon"> WORLD NEWS</li>
-                    <li><img src="pageicon.png" alt="Icon" class="icon"> TODAYILEARNED</li>
+                <button class="collapse" aria-label="Collapse Sidebar">&lt;&lt;</button>
+                <ul class="menu" role="navigation">
+                    <li><a href="#" aria-label="Front Page">&#128190; FRONT PAGE</a></li>
+                    <li><a href="#" aria-label="Pics">&#128195; PICS</a></li>
+                    <li><a href="#" aria-label="Science">&#128241; SCIENCE</a></li>
+                    <li><a href="#" aria-label="Technology">&#128225; TECHNOLOGY</a></li>
+                    <li><a href="#" aria-label="Ask Reddit">&#128269; ASK REDDIT</a></li>
+                    <li><a href="#" aria-label="Funny">&#128514; FUNNY</a></li>
+                    <li><a href="#" aria-label="WTF">&#129324; WTF</a></li>
+                    <li><a href="#" aria-label="IAMA">&#128571; IAMA</a></li>
+                    <li><a href="#" aria-label="World News">&#128571; WORLD NEWS</a></li>
+                    <li><a href="#" aria-label="Today I Learned">&#128571; TODAYILEARNED</a></li>
                     <li><a href="#" class="button">(MORE)</a></li>
                 </ul>
+
                 <div class="sidebar-box">
-                    <h4>
-                        Submit a Link
-                    </h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">
+                        <h4>Submit a Link</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </a>
                 </div>
+
                 <div class="sidebar-box">
-                    <h4>
-                        Create a Community
-                    </h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in.</p>
+                    <a href="#">
+                        <h4>Create a Community</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius.</p>
+                    </a>
                 </div>
+
                 <div class="sidebar-img">
-                    <img src="ad.jpg" alt="Reddit Ad" />
-                    <p>tiniest ad in the world</p>
+                    <a href="#">
+                        <img src="ad.jpg" alt="Reddit Ad" />
+                        <p>tiniest ad in the world</p>
+                    </a>
                 </div>
             </aside>
-            <section class="main">
-                <section class="tabmenu-container">
-                    <ul class="tabmenu">
-                        <button class="tab-selected">what's hot</button>
-                        <button>new</button>
-                        <button>controversial</button>
-                        <button>top</button>
-                        <button>saved</button>
-                    </ul>
+            <section class="main" role="main">
+                <nav class="navbar"  aria-label="Main navigation">
+                    <div class="tabmenu">
+                        <div class="tab">
+                            <input type="radio" name="option" id="hot" checked>
+                            <label class="tab-name" for="hot">What's Hot</label>
+                        </div>
 
-                    <div class="tab-buttons">
-                        <button><strong>1</strong> New Msg</button>
-                        <button><strong>53,211</strong> Link</button>
-                        <button><strong>4,887</strong>Comment</button>
-                    <div>
+                        <div class="tab">
+                            <input type="radio" name="option" id="new">
+                            <label for="new" class="tab-name">new</label>
+                        </div>
 
-                </section>
+                        <div class="tab">
+                            <input type="radio" name="option" id="contro">
+                            <label for="contro" class="tab-name">controversial</label>
+                        </div>
+
+                        <div class="tab">
+                            <input type="radio" name="option" id="top">
+                            <label for="top" class="tab-name">top</label>
+                        </div>
+
+                        <div class="tab">
+                            <input type="radio" name="option" id="saved">
+                            <label for="saved" class="tab-name">saved</label>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <div class="search-container">
+                            <input type="text" id="search" aria-label="Search" />
+                            <button type="submit" aria-label="Search">🔍</button>
+                        </div>
+                        <button aria-label="New Messages">✉️ <strong>1</strong> New Msg</button>
+                        <button aria-label="Links">🔗 <strong>53,211</strong> Link</button>
+                        <button aria-label="Comments">💬 <strong>4,887</strong> Comment</button>
+                    </div>
+                </nav>
+
                 <section class="posts">
-                    <section class="post-list">
+                    <section class="post-list" aria-labelledby="post-list-heading">
                         <ul>
                             <li>
-                                <a href="#" class="post-item">
-                                    <div class="number">1</div>
+                                <div class="post-item"  tabindex="0">
+                                    <p class="number">1</p>
                                     <div class="votes">
-                                        <button class="upvote">▲</button>
+                                        <input type="radio" id="upvote1" name="vote1" class="vote-input" checked aria-label="Vote on post">
+                                        <label for="upvote1" class="upvote" aria-label="Upvote">⬆</label>
                                         <div class="vote-count">123</div>
-                                        <button class="downvote">▼</button>
+                                        <input type="radio" id="downvote1" name="vote1" class="vote-input downvote-input" hidden>
+                                        <label for="downvote1" class="downvote" aria-label="Downvote">⬇</label>
                                     </div>
                                     <img src="ad.jpg" alt="Post Image" class="post-image">
                                     <div class="post-details">
-                                        <div class="title">What do you call 60 guys... <span class="source">(cnn.com)</span></div>
-                                        <div class="submitted">Submitted 3 hours ago by <span class="author">user123</span></div>
-                                        <div class="post-actions">
-                                            <span class="comments">45 comments</span>
-                                            <button class="action-btn">Share</button>
-                                            <button class="action-btn">Save</button>
-                                            <button class="action-btn">Hide</button>
-                                            <button class="action-btn">Report</button>
+                                        <div class="title">
+                                            <a href="#">Cebu drivers don’t know when to stop</a>
+                                            <span class="source">(cnn.com)</span></div>
+                                            <p class="tagline">submitted <time datetime="2025-03-15T10:21:57+00:00">2 hours ago</time> by <span class="author">ZookeepergameOk7629</span></p>
+                                            <div class="post-actions">
+                                                <p class="comments">45 comments</p>
+                                                <button class="action-btn" aria-label="Share">Share</button>
+                                                <button class="action-btn" aria-label="Save">Save</button>
+                                                <button class="action-btn" aria-label="Hide">Hide</button>
+                                                <button class="action-btn" aria-label="Report">Report</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="post-item">
+                                    <p class="number">2</p>
+                                    <div class="votes">
+                                        <input type="radio" id="upvote2" name="vote2" class="vote-input" hidden checked aria-label="Vote on post">
+                                        <label for="upvote2" class="upvote" aria-label="Upvote">⬆</label>
+                                        <div class="vote-count">123</div>
+                                        <input type="radio" id="downvote2" name="vote2" class="vote-input" hidden>
+                                        <label for="downvote2" class="downvote" aria-label="Downvote">⬇</label>
+                                    </div>
+                                    <img src="ad.jpg" alt="Post Image" class="post-image">
+                                    <div class="post-details">
+                                        <div class="title">
+                                            <a href="#">Cebu drivers don’t know when to stop</a>
+                                            <span class="source">(cnn.com)</span></div>
+                                            <p class="tagline">submitted <time datetime="2025-03-15T10:21:57+00:00">2 hours ago</time> by <span class="author">ZookeepergameOk7629</span></p>
+                                            <div class="post-actions">
+                                                <p class="comments">45 comments</p>
+                                                <button class="action-btn" aria-label="Share">Share</button>
+                                                <button class="action-btn" aria-label="Save">Save</button>
+                                                <button class="action-btn" aria-label="Hide">Hide</button>
+                                                <button class="action-btn" aria-label="Report">Report</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                         <div class="nav-buttons">
-                            <a href="#" class="previous">&laquo; Newer</a>
-                            <a href="#" class="next">Older &raquo;</a>
+                            <button type="button" class="nav-btn previous"><span class="arrow">⬅</span> NEWER</button>
+                            <button type="button" class="nav-btn next">OLDER <span class="arrow">⮕</span></button>
                         </div>
                     </section>
+
                     <section class="post-content">
                         <div class="post-container">
                             <div class="title">What do you call 60 guys... <span class="source">(cnn.com)</span></div>
                             <a href="#" class="source">cnn.com</a>
                             <div class="post-footer">
                                 <div class="stats">
-                                    <div class="numbers">45 <span class="points">points (71% like it)</span></div>
+                                    <div class="numbers">45<span class="points"><strong> points</strong> (71% like it)</span></div>
                                     <div class="votes">
-                                        <p>390 up votes</p>
-                                        <p>145 down votes</p>
+                                        <p class="upvote-count">390 up votes</p>
+                                        <p class="downvote-count">145 down votes</p>
+                                    </div>
+                                </div>
+                                <div class="data">
+                                    <p class="tagline ">submitted on
+                                        <time title="Sat Mar 15 10:21:57 2025 UTC"
+                                            datetime="2025-03-15T10:21:57+00:00"
+                                            class="live-timestamp">01 Feb 2011</time>
+                                    </p>
+                                    <div class="comments-sort">
+                                        <p class="comments">45 comments</p>
+                                        <a href="#" class="sortby">sort by</a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="comment-area">
+                            <div class="sort">
+                                <input type="text" name="fname">
+                                <button class="save">save</button>
+                                <a href="#" class="format">formatting help</a>
+                            </div>
+                            <ul>
+                                <li class="comment">
+                                    <div class="entry">
+                                        <div class="votes">
+                                            <input type="radio" id="upvote3" name="vote3" class="vote-input" checked>
+                                            <label for="upvote3" class="upvote">⬆</label>
+                                            <input type="radio" id="downvote3" name="vote3" class="vote-input" hidden>
+                                            <label for="downvote3" class="downvote">⬇</label>
+                                        </div>
+                                        <div class="comment-content">
+                                            <div class="comment-details">
+                                                <p class="author">ZookeepergameOk7629</p>
+                                                <p class="points">42 points</p>
+                                                <p class="time">2 hours ago</p>
+                                                <a href="#" class="expand">[–]</a>
+                                            </div>
+                                            <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                            <p class="comment-actions">
+                                                <button class="comment-actions action-btn">permalink</button>
+                                                <button class="comment-actions action-btn">report</button>
+                                                <button class="comment-actions action-btn">reply</button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="child">
+                                        <div class="entry">
+                                            <div class="votes">
+                                                <input type="radio" id="upvote4" name="vote4" class="vote-input" checked>
+                                                <label for="upvote4" class="upvote">⬆</label>
+                                                <input type="radio" id="downvote4" name="vote4" class="vote-input" hidden>
+                                                <label for="downvote4" class="downvote">⬇</label>
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-details">
+                                                    <p class="author">ZookeepergameOk7629</p>
+                                                    <p class="points">42 points</p>
+                                                    <p class="time">2 hours ago</p>
+                                                    <a href="#" class="expand">[–]</a>
+                                                </div>
+                                                <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                                <p class="comment-actions">
+                                                    <button class="comment-actions action-btn">permalink</button>
+                                                    <button class="comment-actions action-btn">report</button>
+                                                    <button class="comment-actions action-btn">reply</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="child">
+                                        <div class="entry">
+                                            <div class="votes">
+                                                <input type="radio" id="upvote5" name="vote5" class="vote-input" hidden>
+                                                <label for="upvote5" class="upvote">⬆</label>
+                                                <input type="radio" id="downvote5" name="vote5" class="vote-input" hidden>
+                                                <label for="downvote5" class="downvote">⬇</label>
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-details">
+                                                    <p class="author">ZookeepergameOk7629</p>
+                                                    <p class="points">42 points</p>
+                                                    <p class="time">2 hours ago</p>
+                                                    <a href="#" class="expand">[–]</a>
+                                                </div>
+                                                <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                                <p class="comment-actions">
+                                                    <button class="comment-actions action-btn">permalink</button>
+                                                    <button class="comment-actions action-btn">report</button>
+                                                    <button class="comment-actions action-btn">reply</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="child">
+                                            <div class="entry">
+                                                <div class="votes">
+                                                    <input type="radio" id="upvote6" name="vote6" class="vote-input" hidden>
+                                                    <label for="upvote6" class="upvote">⬆</label>
+                                                    <input type="radio" id="downvote6" name="vote6" class="vote-input" hidden>
+                                                    <label for="downvote6" class="downvote">⬇</label>
+                                                </div>
+                                                <div class="comment-content">
+                                                    <div class="comment-details">
+                                                        <p class="author">ZookeepergameOk7629</p>
+                                                        <p class="points">42 points</p>
+                                                        <p class="time">2 hours ago</p>
+                                                        <a href="#" class="expand">[–]</a>
+                                                    </div>
+                                                    <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                                    <p class="comment-actions">
+                                                        <button class="comment-actions action-btn">permalink</button>
+                                                        <button class="comment-actions action-btn">report</button>
+                                                        <button class="comment-actions action-btn">reply</button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="child">
+                                            <div class="entry">
+                                                <div class="votes">
+                                                    <input type="radio" id="upvote7" name="vote7" class="vote-input" hidden>
+                                                    <label for="upvote7" class="upvote">⬆</label>
+                                                    <input type="radio" id="downvote7" name="vote7" class="vote-input" hidden>
+                                                    <label for="downvote7" class="downvote">⬇</label>
+                                                </div>
+                                                <div class="comment-content">
+                                                    <div class="comment-details">
+                                                        <p class="author">ZookeepergameOk7629</p>
+                                                        <p class="points">42 points</p>
+                                                        <p class="time">2 hours ago</p>
+                                                        <a href="#" class="expand">[–]</a>
+                                                    </div>
+                                                    <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                                    <p class="comment-actions">
+                                                        <button class="comment-actions action-btn">permalink</button>
+                                                        <button class="comment-actions action-btn">report</button>
+                                                        <button class="comment-actions action-btn">reply</button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="child">
+                                        <div class="entry">
+                                            <div class="votes">
+                                                <input type="radio" id="upvote8" name="vote8" class="vote-input" hidden>
+                                                <label for="upvote8" class="upvote">⬆</label>
+                                                <input type="radio" id="downvote8" name="vote8" class="vote-input" hidden>
+                                                <label for="downvote8" class="downvote">⬇</label>
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-details">
+                                                    <p class="author">ZookeepergameOk7629</p>
+                                                    <p class="points">42 points</p>
+                                                    <p class="time">2 hours ago</p>
+                                                    <a href="#" class="expand">[–]</a>
+                                                </div>
+                                                <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                                <p class="comment-actions">
+                                                    <button class="comment-actions action-btn">permalink</button>
+                                                    <button class="comment-actions action-btn">report</button>
+                                                    <button class="comment-actions action-btn">reply</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="comment">
+                                    <div class="entry">
+                                        <div class="votes">
+                                            <input type="radio" id="upvote9" name="vote9" class="vote-input" hidden>
+                                            <label for="upvote9" class="upvote">⬆</label>
+                                            <input type="radio" id="downvote9" name="vote9" class="vote-input" hidden>
+                                            <label for="downvote9" class="downvote">⬇</label>
+                                        </div>
+                                        <div class="comment-content">
+                                            <div class="comment-details">
+                                                <p class="author">ZookeepergameOk7629</p>
+                                                <p class="points">42 points</p>
+                                                <p class="time">2 hours ago</p>
+                                                <a href="#" class="expand">[–]</a>
+                                            </div>
+                                            <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                            <p class="comment-actions">
+                                                <button class="comment-actions action-btn">permalink</button>
+                                                <button class="comment-actions action-btn">report</button>
+                                                <button class="comment-actions action-btn">reply</button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="child">
+                                        <div class="entry">
+                                            <div class="votes">
+                                                <input type="radio" id="upvote10" name="vote10" class="vote-input" hidden>
+                                                <label for="upvote10" class="upvote">⬆</label>
+                                                <input type="radio" id="downvote10" name="vote10" class="vote-input" hidden>
+                                                <label for="downvote10" class="downvote">⬇</label>
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-details">
+                                                    <p class="author">ZookeepergameOk7629</p>
+                                                    <p class="points">42 points</p>
+                                                    <p class="time">2 hours ago</p>
+                                                    <a href="#" class="expand">[–]</a>
+                                                </div>
+                                                <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                                <p class="comment-actions">
+                                                    <button class="comment-actions action-btn">permalink</button>
+                                                    <button class="comment-actions action-btn">report</button>
+                                                    <button class="comment-actions action-btn">reply</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="child">
+                                        <div class="entry">
+                                            <div class="votes">
+                                                <input type="radio" id="upvote11" name="vote11" class="vote-input" hidden>
+                                                <label for="upvote11" class="upvote">⬆</label>
+                                                <input type="radio" id="downvote11" name="vote11" class="vote-input" hidden>
+                                                <label for="downvote11" class="downvote">⬇</label>
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-details">
+                                                    <p class="author">ZookeepergameOk7629</p>
+                                                    <p class="points">42 points</p>
+                                                    <p class="time">2 hours ago</p>
+                                                    <a href="#" class="expand">[–]</a>
+                                                </div>
+                                                <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                                <p class="comment-actions">
+                                                    <button class="comment-actions action-btn">permalink</button>
+                                                    <button class="comment-actions action-btn">report</button>
+                                                    <button class="comment-actions action-btn">reply</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="child">
+                                            <div class="entry">
+                                                <div class="votes">
+                                                    <input type="radio" id="upvote12" name="vote12" class="vote-input" hidden>
+                                                    <label for="upvote12" class="upvote">⬆</label>
+                                                    <input type="radio" id="downvote12" name="vote12" class="vote-input" hidden>
+                                                    <label for="downvote12" class="downvote">⬇</label>
+                                                </div>
+                                                <div class="comment-content">
+                                                    <div class="comment-details">
+                                                        <p class="author">ZookeepergameOk7629</p>
+                                                        <p class="points">42 points</p>
+                                                        <p class="time">2 hours ago</p>
+                                                        <a href="#" class="expand">[–]</a>
+                                                    </div>
+                                                    <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                                    <p class="comment-actions">
+                                                        <button class="comment-actions action-btn">permalink</button>
+                                                        <button class="comment-actions action-btn">report</button>
+                                                        <button class="comment-actions action-btn">reply</button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="child">
+                                            <div class="entry">
+                                                <div class="votes">
+                                                    <input type="radio" id="upvote13" name="vote13" class="vote-input" hidden>
+                                                    <label for="upvote13" class="upvote">⬆</label>
+                                                    <input type="radio" id="downvote13" name="vote13" class="vote-input" hidden>
+                                                    <label for="downvote13" class="downvote">⬇</label>
+                                                </div>
+                                                <div class="comment-content">
+                                                    <div class="comment-details">
+                                                        <p class="author">ZookeepergameOk7629</p>
+                                                        <p class="points">42 points</p>
+                                                        <p class="time">2 hours ago</p>
+                                                        <a href="#" class="expand">[–]</a>
+                                                    </div>
+                                                    <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                                    <p class="comment-actions">
+                                                        <button class="comment-actions action-btn">permalink</button>
+                                                        <button class="comment-actions action-btn">report</button>
+                                                        <button class="comment-actions action-btn">reply</button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="child">
+                                        <div class="entry">
+                                            <div class="votes">
+                                                <input type="radio" id="upvote14" name="vote14" class="vote-input" hidden>
+                                                <label for="upvote14" class="upvote">⬆</label>
+                                                <input type="radio" id="downvote14" name="vote" class="vote-input" hidden>
+                                                <label for="downvote14" class="downvote14">⬇</label>
+                                            </div>
+                                            <div class="comment-content">
+                                                <div class="comment-details">
+                                                    <p class="author">ZookeepergameOk7629</p>
+                                                    <p class="points">42 points</p>
+                                                    <p class="time">2 hours ago</p>
+                                                    <a href="#" class="expand">[–]</a>
+                                                </div>
+                                                <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor pharetra varius. Morbi feugiat ultrices risus, at hendrerit massa efficitur in. Vestibulum vestibulum purus eget ante varius, vitae volutpat augue mollis. Suspendisse eget gravida nulla. Phasellus urna nibh, dignissim quis eros a, malesuada accumsan lectus.</p>
+                                                <p class="comment-actions">
+                                                    <button class="comment-actions action-btn">permalink</button>
+                                                    <button class="comment-actions action-btn">report</button>
+                                                    <button class="comment-actions action-btn">reply</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </section>
                 </section>
