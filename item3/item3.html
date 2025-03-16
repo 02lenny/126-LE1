@@ -10,6 +10,8 @@
         <header>
             <h1>Instant Pancit Canton Masterclass</h1>
             <p class="subtitle">Follow these steps to create a quick, easy, and oh-so-yummy pancit canton!</p>
+        </header>
+        <main>
             <section>
                 <h2>Ingredients</h2>
                 <div class="ingredients">
@@ -23,75 +25,86 @@
                     </div>
                     <div class="ingredient">
                         <img src="images/option.png" alt="Egg and veggies" />
-                        <p>Optional: Egg, veggies, or leftover meat for extra flair</p>
+                        <p>Egg, veggies, or leftover meat (Optional)</p>
                     </div>
                 </div>
             </section>
 
-        </header>
+            <section>
+                <h2>Steps</h2>
+                <div id="step1" class="step" tabindex="0" style="background-image: url('images/step1.jpg');">
+                    <h2>Step 1 of 7: Boil Water</h2>
+                    <p>Pour about 1½ cups of water into a pot and bring it to a boil.</p>
+                    <div class="step-actions">
+                        <p>>></p>
+                        <a href="#step2" class="next">Next</a>
+                    </div>
+                </div>
+        
+                <div id="step2" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step2.jpg');">
+                    <h2>Step 2 of 7: Cook the Noodles</h2>
+                    <p>Toss in the noodles and cook for 3-4 minutes, stirring now and then.</p>
+                    <div class="step-actions">
+                        <a href="#step1" class="prev">Prev</a>
+                        <a href="#step3" class="next">Next</a>
+                    </div>
+                </div>
+        
+                <div id="step3" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step3.jpg');">
+                    <h2>Step 3 of 7: Prepare the Seasoning</h2>
+                    <p>While waiting, empty the seasoning packets into a clean bowl.</p>
+                    <div class="step-actions">
+                        <a href="#step2" class="prev">Prev</a>
+                        <a href="#step4" class="next">Next</a>
+                    </div>
+                </div>
 
-        <main>
-            <h2>Steps</h2>
-            <section id="step1" class="step" tabindex="0" style="background-image: url('images/step1.jpg');">
-                <h2>Step 1 of 7: Boil Water</h2>
-                <p>Pour about 1½ cups of water into a pot and bring it to a boil.</p>
-                <div class="step-actions">
-                    <p>Start >></p>
-                    <a href="#step2" class="next">Next</a>
+                <div id="step4" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step4.jpg');">
+                    <h2>Step 4 of 7: Drain the Noodles</h2>
+                    <p>Once the noodles are cooked, drain the water completely.</p>
+                    <div class="step-actions">
+                        <a href="#step3" class="prev">Prev</a>
+                        <a href="#step5" class="next">Next</a>
+                    </div>
                 </div>
-            </section>
-    
-            <section id="step2" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step2.jpg');">
-                <h2>Step 2 of 7: Cook the Noodles</h2>
-                <p>Toss in the noodles and cook for 3-4 minutes, stirring now and then.</p>
-                <div class="step-actions">
-                    <a href="#step1" class="prev">Prev</a>
-                    <a href="#step3" class="next">Next</a>
-                </div>
-            </section>
-    
-            <section id="step3" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step3.jpg');">
-                <h2>Step 3 of 7: Prepare the Seasoning</h2>
-                <p>While waiting, empty the seasoning packets into a clean bowl.</p>
-                <div class="step-actions">
-                    <a href="#step2" class="prev">Prev</a>
-                    <a href="#step4" class="next">Next</a>
-                </div>
-            </section>
 
-            <section id="step4" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step4.jpg');">
-                <h2>Step 4 of 7: Drain the Noodles</h2>
-                <p>Once the noodles are cooked, drain the water completely.</p>
-                <div class="step-actions">
-                    <a href="#step3" class="prev">Prev</a>
-                    <a href="#step5" class="next">Next</a>
+                <div id="step5" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step5.jpg');">
+                    <h2>Step 5 of 7: Mix Well</h2>
+                    <p>Mix the drained noodles to the bowl with the seasoning.</p>
+                    <div class="step-actions">
+                        <a href="#step4" class="prev">Prev</a>
+                        <a href="#step6" class="next">Next</a>
+                    </div>
                 </div>
-            </section>
 
-            <section id="step5" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step5.jpg');">
-                <h2>Step 5 of 7: Mix Well</h2>
-                <p>Mix the drained noodles to the bowl with the seasoning.</p>
-                <div class="step-actions">
-                    <a href="#step4" class="prev">Prev</a>
-                    <a href="#step6" class="next">Next</a>
+                <div id="step6" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step6.jpg');">
+                    <h2>Step 6 of 7: Add Extras (Optional)</h2>
+                    <p>Add a fried egg, fresh veggies, or that tasty leftover meat for an upgrade.</p>
+                    <div class="step-actions">
+                        <a href="#step5" class="prev">Prev</a>
+                        <a href="#step7" class="next">Next</a>
+                    </div>
                 </div>
-            </section>
-
-            <section id="step6" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step6.jpg');">
-                <h2>Step 6 of 7: Add Extras (Optional)</h2>
-                <p>Add a fried egg, fresh veggies, or that tasty leftover meat for an upgrade.</p>
-                <div class="step-actions">
-                    <a href="#step5" class="prev">Prev</a>
-                    <a href="#step7" class="next">Next</a>
+        
+                <div id="step7" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step7.jpg');">
+                    <h2>Step 7 of 7: Serve and Enjoy!</h2>
+                    <p>Serve hot and enjoy your pancit canton magic!</p>
+                    <div class="step-actions">
+                        <a href="#step6" class="prev">Prev</a>
+                        <a href="#step1" class="restart">Restart</a>
+                    </div>
                 </div>
-            </section>
-    
-            <section id="step7" class="step" tabindex="0" aria-hidden="true" style="background-image: url('images/step7.jpg');">
-                <h2>Step 7 of 7: Serve and Enjoy!</h2>
-                <p>Serve hot and enjoy your pancit canton magic!</p>
-                <div class="step-actions">
-                    <a href="#step6" class="prev">Prev</a>
-                    <a href="#step1" class="restart">Restart</a>
+               
+                <div class="step-nav">
+                    <ul class="step-dots">
+                        <li><a href="#step1" class="step-dot" aria-label="Go to Step 1"></a></li>
+                        <li><a href="#step2" class="step-dot" aria-label="Go to Step 2"></a></li>
+                        <li><a href="#step3" class="step-dot" aria-label="Go to Step 3"></a></li>
+                        <li><a href="#step4" class="step-dot" aria-label="Go to Step 4"></a></li>
+                        <li><a href="#step5" class="step-dot" aria-label="Go to Step 5"></a></li>
+                        <li><a href="#step6" class="step-dot" aria-label="Go to Step 6"></a></li>
+                        <li><a href="#step7" class="step-dot" aria-label="Go to Step 7"></a></li>
+                    </ul>
                 </div>
             </section>
         </main>
